@@ -4,6 +4,14 @@
         <element label="Date 1" max_length="40" name="date_1d" type="glide_date"/>
         <element label="New filed 1" max_length="40" name="new_filed_1" type="integer"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Request for email" mandatory="true" max_length="40" name="u_requested_for_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Facility" sequence="0" value="Facility"/>
+                <element label="HR" sequence="1" value="HR"/>
+                <element label="Legal" sequence="2" value="Legal"/>
+            </choice>
+        </element>
         <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
     </element>
 </database>
